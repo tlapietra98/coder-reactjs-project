@@ -1,0 +1,11 @@
+.navContainer{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    background-color: #535353;
+}
+
+.navLinks{
+    display: flex;
+    justify-content: center;
+}
