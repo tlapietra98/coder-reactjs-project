@@ -1,6 +1,9 @@
 .navContainer{
     display: flex;
     justify-content: space-evenly;
+
+    width: 100%;
+
     color: white;
     background-color: #535353;
 }

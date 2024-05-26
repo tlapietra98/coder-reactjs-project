@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1001,
+        "name": "PlayStation 5",
+        "category": "Console",
+        "price": 449.99,
+        "description": "Sony - PlayStation 5 Console - White",
+        "color": "White",
+        "storage": 825,
+        "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6523/6523167_rd.jpg;maxHeight=2000;maxWidth=2000",
+        "stock": 1000
+    },   
+    {
+        "id": 1002,
+        "name": "Xbox Series X",
+        "category": "Console",
+        "price": 449.99,
+        "description": "Microsoft - Xbox Series X 1TB Console - Black",
+        "color": "Black",
+        "storage": 1000,
+        "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6428/6428324_sd.jpg;maxHeight=2000;maxWidth=2000",
+        "stock": 1000
+    }, 
+    {
+        "id": 1003,
+        "name": "Xbox Series S",
+        "category": "Console",
+        "price": 349.99,
+        "description": "Microsoft - Xbox Series S 1TB All-Digital Console (Disc-Free Gaming) - Black",
+        "color": "Black",
+        "storage": 1000,
+        "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6547/6547877_sd.jpg;maxHeight=2000;maxWidth=2000",
+        "stock": 1000
+    }, 
+    {
+        "id": 1004,
+        "name": "Nintendo Switch",
+        "category": "Console",
+        "price": 299.99,
+        "description": "Nintendo - Switch with Neon Blue and Neon Red Joy-Con - Multi",
+        "color": "Multi",
+        "storage": 32,
+        "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6522/6522225_sd.jpg;maxHeight=2000;maxWidth=2000",
+        "stock": 1000
+    }, 
+    {
+        "id": 1005,
+        "name": "Nintendo Switch OLED",
+        "category": "Console",
+        "price": 349.99,
+        "description": "Nintendo - Switch - OLED Model w/ Neon Blue and Neon Red Joy-Con - Multi",
+        "color": "Multi",
+        "storage": 64,
+        "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6470/6470924_sd.jpg;maxHeight=2000;maxWidth=2000",
+        "stock": 1000
+    }, 
+    {
+        "id": 2001,
+        "name": "Elden Ring",
+        "category": "Videogame",
+        "platform": "PS5",
+        "price": 59.99,
+        "description": "Elden Ring - PlayStation 5",
+        "image": "https://m.media-amazon.com/images/I/81h2WhI4dtL._AC_SL1500_.jpg",
+        "stock": 1000
+    },        
+    {
+        "id": 2002,
+        "name": "Armored Core VI Fires of Rubicon",
+        "category": "Videogame",
+        "platform": "PS5",
+        "price": 59.99,
+        "description": "BANDAI NAMCO Entertainment Armored Core VI Fires of Rubicon - PlayStation 5",
+        "image": "https://m.media-amazon.com/images/I/810fF1amJjL._SL1500_.jpg",
+        "stock": 1000
+    },   
+    {
+        "id": 2003,
+        "name": "Persona 3 Reload",
+        "category": "Videogame",
+        "platform": "PS5",
+        "price": 69.99,
+        "description": "Persona 3 Reload: Standard Edition - PlayStation 5",
+        "image": "https://m.media-amazon.com/images/I/81hmWAdXP8L._AC_SL1500_.jpg",
+        "stock": 1000
+    }   
+]
