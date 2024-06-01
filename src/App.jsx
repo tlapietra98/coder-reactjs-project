@@ -1,18 +1,9 @@
-import Navbar from "./components/Navbar/Navbar"
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
-import Footer from "./components/Footer/Footer"
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import AppRouter from "./router/AppRouter";
 
 function App() {
 
-  return (
-    <>
-      <Navbar/>
-      <ItemListContainer greeting={"Welcome to Gamestuck!"} />
-      <ItemDetailContainer id={1001}/>
-      {/* <Footer/> */}
-    </>
-  )
+  return <AppRouter/>
+  
 }
 
 export default App

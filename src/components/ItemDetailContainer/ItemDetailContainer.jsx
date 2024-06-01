@@ -1,18 +1,22 @@
 import {useState, useEffect} from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import Item from "../Item/Item"
 import Loader from "../Loader/Loader"
+import { useParams } from "react-router-dom"
+import "./ItemDetailContainer.css"
 
-const ItemDetailContainer = ({id}) => {
+
+const ItemDetailContainer = ({itemID}) => {
 
     const [product, setProduct] = useState(null)
+
+    const { id } = useParams() 
 
     useEffect(()=>{
         const fetchData = async () => {
             try{
                 const response = await fetch("./data/products.json")
                 const data = await response.json()
-                const product = data.find(product => product.id == id)
+                const product = data.find(product => product.id == itemID)
                 setProduct(product)
             }
             catch(error){
@@ -22,11 +26,11 @@ const ItemDetailContainer = ({id}) => {
 
         fetchData()
 
-    }, [id])
+    }, [itemID])
 
 
     return (
-        <div>
+        <div className="containerContainer">
             {product ? <ItemDetail product={product}/> : <Loader/>}
         </div>
     )

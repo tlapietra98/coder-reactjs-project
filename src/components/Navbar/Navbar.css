@@ -10,5 +10,6 @@
 
 .navLinks{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    min-width: 300px;
 }
