@@ -5,18 +5,19 @@ import { useParams } from "react-router-dom"
 import "./ItemDetailContainer.css"
 
 
-const ItemDetailContainer = ({itemID}) => {
+const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState(null)
 
     const { id } = useParams() 
 
     useEffect(()=>{
+
         const fetchData = async () => {
             try{
-                const response = await fetch("./data/products.json")
+                const response = await fetch("/data/products.json")
                 const data = await response.json()
-                const product = data.find(product => product.id == itemID)
+                const product = data.find(product => product.id == id)
                 setProduct(product)
             }
             catch(error){
@@ -26,12 +27,13 @@ const ItemDetailContainer = ({itemID}) => {
 
         fetchData()
 
-    }, [itemID])
+    }, [id])
 
 
     return (
         <div className="containerContainer">
-            {product ? <ItemDetail product={product}/> : <Loader/>}
+            {/* <>{id}</> */}
+            {product ? <ItemDetail product={product}/> : <p>error en item detail container</p>}
         </div>
     )
 }

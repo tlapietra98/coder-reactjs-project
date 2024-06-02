@@ -16,9 +16,13 @@ const ItemListContainer = ({greeting}) => {
 
       const fetchData = async () => {
         try{
-          const response = await fetch ("./data/products.json")
+          const response = await fetch ("/data/products.json")
           const data = await response.json()
-          setProducts(data)
+          
+          id === undefined ?
+            setProducts(data)
+            :
+            setProducts(data.filter(product => product.category == id))
         }
         catch(error){
           console.log("Error while obtaining products", error)
@@ -34,7 +38,7 @@ const ItemListContainer = ({greeting}) => {
       
       <h3 className='contentTitle'>{greeting}</h3>
 
-      <ItemDetailContainer itemID={1001}/>
+      {/* <ItemDetailContainer itemID={1001}/> */}
 
       {products.length == 0 ? 
         <Loader/> 
