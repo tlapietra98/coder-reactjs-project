@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
+import CartItem from "../CartItem/CartItem"
 
 function Cart (){
 
@@ -10,7 +11,7 @@ function Cart (){
     if (items.length){
         return (
             <div>
-                {items.map(item => <li key={item.id}> {item.name} quantity: {item.quantity} </li>)}
+                {items.map(item => <CartItem key={item.id} cItem={item} />)}
             </div>
         )
     }
