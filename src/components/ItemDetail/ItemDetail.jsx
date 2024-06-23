@@ -3,7 +3,7 @@ import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
 
 
-const ItemDetail = ({product}) => {
+const ItemDetail = ({ product }) => {
   return (
     <div className="detailContainer">
         <h3>{product.name}</h3>
@@ -15,6 +15,8 @@ const ItemDetail = ({product}) => {
         <p>Stock: {product.stock}</p>
 
         <ItemCount initial={1} stock={product.stock} item={product} />
+
+        {console.log(product)}
 
     </div>
   )

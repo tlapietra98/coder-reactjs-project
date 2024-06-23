@@ -1,4 +1,4 @@
-import { FaCartPlus } from "react-icons/fa"
+import { FaCartPlus as CartIcon} from "react-icons/fa"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
@@ -11,8 +11,8 @@ const CartWidget = () => {
   return ( 
     <div>
         <Link to='/cart' className="cartIconContainer">
-          <FaCartPlus/>
-          {items.length}
+          <CartIcon/>
+          {items.length > 0 && items.length}
         </Link>
     </div>
   )

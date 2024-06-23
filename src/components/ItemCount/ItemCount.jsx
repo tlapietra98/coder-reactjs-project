@@ -2,10 +2,10 @@ import React, {useState, useContext} from "react"
 import { CartContext } from "../../context/CartContext"
 import "./ItemCount.css"
 
-const ItemCount = ({initial, stock, product}) => {
+const ItemCount = ({initial, stock, item}) => {
 
     const [count, setCount] = useState(initial)
-    const { addToCart } = useContext(CartContext)
+    const { addCartItem } = useContext(CartContext)
 
     const decrement = () => {
         if (count > initial){
@@ -19,14 +19,14 @@ const ItemCount = ({initial, stock, product}) => {
         }
     }
 
-    const addProduct = () => addToCart({ ... product, quantity: count })
+    const addItem = () => addCartItem({ ... item, quantity: count }) // paso product y al final le agrego quantity como otra propiedad
 
     return(
         <div className="countContainer">
             <button onClick={decrement}>-</button>
             <span className="countNumber">{count}</span>
             <button onClick={increment}>+</button>
-            <button onClick={addProduct}>Add to cart</button>
+            <button onClick={addItem}>Add to cart</button>
         </div>
     )
 }

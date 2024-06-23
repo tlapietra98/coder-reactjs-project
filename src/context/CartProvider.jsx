@@ -5,14 +5,21 @@ function CartProvider ({children}) {
     
     const [items, setItems] = useState([])
 
-    const addToCart = (item) => {
-        setItems([ ... items, item ])
+
+    const isInCart = (itemID) => {
+        return items.find(item => item.id == itemID)
     }
+
+    const addCartItem = (item) => {
+        setItems([ ... items, item]) //tengo que modificarlo para que agregue un objeto que contiene al item y la quantity
+    }
+
+    const removeCartItem = (itemID) => {}
 
     const clearCart = () => setItems([])
 
     return(
-        <CartContext.Provider value = {{ items, addToCart, clearCart }}>
+        <CartContext.Provider value = {{ items, addCartItem, clearCart }}>
             {children}
         </CartContext.Provider>
     )
