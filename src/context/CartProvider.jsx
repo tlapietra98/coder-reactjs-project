@@ -11,15 +11,24 @@ function CartProvider ({children}) {
     }
 
     const addCartItem = (item) => {
-        setItems([ ... items, item]) //tengo que modificarlo para que agregue un objeto que contiene al item y la quantity
+        
+        if(isInCart(item.id)){
+            const cartItem = isInCart(item.id)
+            cartItem.quantity += item.quantity
+            return
+        }
+        
+        setItems([ ... items, item])
     }
 
-    const removeCartItem = (itemID) => {}
+    const removeCartItem = (itemID) => {
+        setItems(items.filter(item=>item.id != itemID))
+    }
 
     const clearCart = () => setItems([])
 
     return(
-        <CartContext.Provider value = {{ items, addCartItem, clearCart }}>
+        <CartContext.Provider value = {{ items, addCartItem, removeCartItem, clearCart }}>
             {children}
         </CartContext.Provider>
     )
