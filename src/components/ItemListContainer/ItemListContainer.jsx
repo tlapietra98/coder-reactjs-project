@@ -1,6 +1,7 @@
-import {useState, useEffect} from "react"
+import {useState, useEffect, useContext} from "react"
 import Loader from "../Loader/Loader"
 import ItemList from "../ItemList/ItemList"
+import { CartContext } from "../../context/CartContext"
 import { useParams } from "react-router-dom"
 import "./ItemListContainer.css"
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
@@ -10,6 +11,10 @@ const ItemListContainer = ({greeting}) => {
   const [products, setProducts] = useState([])
 
   const { id } = useParams()
+
+  const { items } = useContext(CartContext)
+
+  console.log(items)
 
   useEffect(
     () => {

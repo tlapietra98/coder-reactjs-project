@@ -1,0 +1,6 @@
+.cartIconContainer{
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 50px;
+    margin-top: 10px;
+}

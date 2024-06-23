@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
     return (
         <div className="containerContainer">
             {/* <>{id}</> */}
-            {product ? <ItemDetail product={product}/> : <p>error en item detail container</p>}
+            {product ? <ItemDetail product={product}/> : <Loader/>}
         </div>
     )
 }
