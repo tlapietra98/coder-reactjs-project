@@ -16,7 +16,7 @@ const ItemListContainer = ({greeting}) => {
 
   //console.log(items)
 
-  const [productsFiltered, setProductsFiltered] = useState([])
+  const [productsTest, setProductsTest] = useState([])
 
 
   useEffect(
@@ -24,7 +24,6 @@ const ItemListContainer = ({greeting}) => {
 
       const fetchData = async () => {
         try{
-
 
           //con firebase
           const db = getFirestore()
@@ -34,29 +33,30 @@ const ItemListContainer = ({greeting}) => {
 
             const docsRef = collection(db, "products")
             const querySnaphot = await getDocs(docsRef)
-            setProductsFiltered(querySnaphot.docs.map(doc => ({id:doc.id, ...doc.data()})))
+            setProductsTest(querySnaphot.docs.map(doc => ({id:doc.id, ...doc.data()})))
             querySnaphot.forEach((doc)=>{console.log(doc.id, "=>", doc.data())})
+            setProducts(querySnaphot.docs.map(doc => ({id:doc.id, ...doc.data()})))
           }
           else{
             console.log("ID is: ", id)
 
             const q = query(collection(db, "products"), where("category", "==", id))
             const querySnaphot = await getDocs(q)
-            setProductsFiltered(querySnaphot.docs.map(doc => ({id:doc.id, ...doc.data()})))
+            setProductsTest(querySnaphot.docs.map(doc => ({id:doc.id, ...doc.data()})))
             querySnaphot.forEach((doc)=>{console.log(doc.id, "=>", doc.data())})
+            setProducts(querySnaphot.docs.map(doc => ({id:doc.id, ...doc.data()})))
           }
-          
 
 
 
           //con json
-          const response = await fetch ("/data/products.json")
+          /* const response = await fetch ("/data/products.json")
           const data = await response.json()
           
           id === undefined ?
             setProducts(data)
             :
-            setProducts(data.filter(product => product.category == id))
+            setProducts(data.filter(product => product.category == id)) */
 
 
         }
