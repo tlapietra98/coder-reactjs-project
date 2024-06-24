@@ -3,6 +3,8 @@ import { CartContext } from "../../context/CartContext"
 import CartItem from "../CartItem/CartItem"
 import { collection , addDoc, getFirestore} from "firebase/firestore"
 import { useNavigate } from "react-router-dom"
+import "./Cart.css"
+
 
 function Cart (){
 
@@ -33,7 +35,7 @@ function Cart (){
 
     if (cartItems.length){
         return (
-            <div>
+            <div className="cartContainer">
                 {cartItems.map(item => <CartItem key={item.id} cItem={item} />)}
                 <p>Total: {totalCartPrice}</p>
                 <button onClick={addPurchaseOrder}>Confirm purchase</button>
