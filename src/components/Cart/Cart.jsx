@@ -4,14 +4,15 @@ import CartItem from "../CartItem/CartItem"
 
 function Cart (){
 
-    const { items } = useContext(CartContext)
+    const { cartItems, totalCartPrice } = useContext(CartContext)
 
-    console.log(items)
+    console.log(cartItems)
 
-    if (items.length){
+    if (cartItems.length){
         return (
             <div>
-                {items.map(item => <CartItem key={item.id} cItem={item} />)}
+                {cartItems.map(item => <CartItem key={item.id} cItem={item} />)}
+                <p>Total: {totalCartPrice}</p>
             </div>
         )
     }

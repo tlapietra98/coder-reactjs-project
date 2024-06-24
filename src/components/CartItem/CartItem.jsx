@@ -9,10 +9,14 @@ function CartItem({ cItem }){
     const deleteItem = () => removeCartItem(cItem.id)
 
     return (
-        <>
-            <p>{cItem.name} quantity: {cItem.quantity}</p>
+        <div>
+            <h3>{cItem.name}</h3>
+            <img style={{"maxWidth": "150px","maxHeight": "150px"}} src={cItem.image} alt={cItem.description}/>
+            <p>Unit price: {cItem.price}</p>
+            <p>Quantity: {cItem.quantity}</p>
+            <p>Price: {(cItem.price * cItem.quantity)}</p>
             <Button onClick={deleteItem}>X</Button>
-        </>
+        </div>
 
     )
 }

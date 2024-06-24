@@ -1,13 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { CartContext } from "./CartContext"
 
 function CartProvider ({children}) {
     
-    const [items, setItems] = useState([])
+    const [cartItems, setCartItems] = useState([])
+    const [totalCartPrice, setTotalCartPrice] = useState(0)
 
+    useEffect(()=>{
+        setTotalCartPrice(cartItems.reduce((acc,item)=> acc + item.price * item.quantity,0))
+    },[cartItems])
 
     const isInCart = (itemID) => {
-        return items.find(item => item.id == itemID)
+        return cartItems.find(item => item.id == itemID)
     }
 
     const addCartItem = (item) => {
@@ -18,17 +22,17 @@ function CartProvider ({children}) {
             return
         }
         
-        setItems([ ... items, item])
+        setCartItems([ ... cartItems, item])
     }
 
     const removeCartItem = (itemID) => {
-        setItems(items.filter(item=>item.id != itemID))
+        setCartItems(cartItems.filter(item=>item.id != itemID))
     }
 
-    const clearCart = () => setItems([])
+    const clearCart = () => setCartItems([])
 
     return(
-        <CartContext.Provider value = {{ items, addCartItem, removeCartItem, clearCart }}>
+        <CartContext.Provider value = {{ cartItems, totalCartPrice, addCartItem, removeCartItem, clearCart }}>
             {children}
         </CartContext.Provider>
     )

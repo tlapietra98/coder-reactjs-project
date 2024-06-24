@@ -1,7 +1,6 @@
-import {useState, useEffect, useContext} from "react"
+import {useState, useEffect} from "react"
 import Loader from "../Loader/Loader"
 import ItemList from "../ItemList/ItemList"
-import { CartContext } from "../../context/CartContext"
 import { useParams } from "react-router-dom"
 import { collection, getDocs, query, where, getFirestore } from "firebase/firestore"
 import "./ItemListContainer.css"
