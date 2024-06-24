@@ -2,7 +2,7 @@ import {useState, useEffect} from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import Loader from "../Loader/Loader"
 import { useParams } from "react-router-dom"
-import { collection, getDocs, doc, query, where, getDoc, getFirestore } from "firebase/firestore"
+import { doc, getDoc, getFirestore } from "firebase/firestore"
 import "./ItemDetailContainer.css"
 
 
@@ -11,8 +11,6 @@ const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
 
     const { id } = useParams() 
-
-    const [productTest, setProductTest] = useState(null)
 
     useEffect(()=>{
 
@@ -26,8 +24,6 @@ const ItemDetailContainer = () => {
 
                 const docRef = doc(db, "products", id)
                 const docSnapshot = await getDoc(docRef)
-                setProductTest(({id:docSnapshot.id, ...docSnapshot.data()}))
-                console.log(productTest)
                 setProduct(({id:docSnapshot.id, ...docSnapshot.data()}))
             
 
