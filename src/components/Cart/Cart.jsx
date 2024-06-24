@@ -2,10 +2,12 @@ import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import CartItem from "../CartItem/CartItem"
 import { collection , addDoc, getFirestore} from "firebase/firestore"
+import { useNavigate } from "react-router-dom"
 
 function Cart (){
 
     const { cartItems, totalCartPrice, clearCart } = useContext(CartContext)
+    const navigate = useNavigate()
 
     console.log(cartItems)
 
@@ -26,6 +28,7 @@ function Cart (){
         const docRef = collection(db,"orders")
         await addDoc(docRef, order)
         clearCart()
+        navigate('/orders')
     }
 
     if (cartItems.length){

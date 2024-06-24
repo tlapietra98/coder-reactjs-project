@@ -6,20 +6,13 @@ const Navbar = () => {
   return (
     <nav className="navContainer">
         <div>
-            <Link to='/' className="logo"><h1>Gamestuck</h1></Link>
+          <Link to='/' className="logo"><h1>Gamestuck</h1></Link>
         </div>
-        <div> 
-            <ul className="navLinks">
-                <li>
-                  <Link to='/'>Home</Link>
-                </li>
-                <li>
-                  <Link to='/category/consoles'>Consoles</Link>
-                </li>
-                <li>
-                  <Link to='/category/videogames'>Videogames</Link>
-                </li>
-            </ul>
+        <div className="navLinks"> 
+          <Link to='/'>Home</Link>
+          <Link to='/category/consoles'>Consoles</Link>
+          <Link to='/category/videogames'>Videogames</Link>
+          <Link to='/orders'>Orders</Link>  
         </div>
         <CartWidget/>
     </nav>

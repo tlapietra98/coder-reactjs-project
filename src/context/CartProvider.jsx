@@ -5,9 +5,14 @@ function CartProvider ({children}) {
     
     const [cartItems, setCartItems] = useState([])
     const [totalCartPrice, setTotalCartPrice] = useState(0)
+    const [totalCartQuantity, setTotalCartQuantity] = useState(0)
 
     useEffect(()=>{
         setTotalCartPrice(cartItems.reduce((acc,item)=> acc + item.price * item.quantity,0))
+    },[cartItems])
+
+    useEffect(()=>{
+        setTotalCartQuantity(cartItems.reduce((acc,item)=> acc + item.quantity,0))
     },[cartItems])
 
     const isInCart = (itemID) => {
@@ -32,7 +37,7 @@ function CartProvider ({children}) {
     const clearCart = () => setCartItems([])
 
     return(
-        <CartContext.Provider value = {{ cartItems, totalCartPrice, addCartItem, removeCartItem, clearCart }}>
+        <CartContext.Provider value = {{ cartItems, totalCartPrice, totalCartQuantity, addCartItem, removeCartItem, clearCart }}>
             {children}
         </CartContext.Provider>
     )

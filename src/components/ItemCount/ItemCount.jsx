@@ -1,11 +1,13 @@
 import React, {useState, useContext} from "react"
 import { CartContext } from "../../context/CartContext"
+import { useNavigate } from "react-router-dom"
 import "./ItemCount.css"
 
 const ItemCount = ({initial, stock, item}) => {
 
     const [count, setCount] = useState(initial)
     const { addCartItem } = useContext(CartContext)
+    const navigate = useNavigate()
 
     const decrement = () => {
         if (count > initial){
@@ -19,7 +21,10 @@ const ItemCount = ({initial, stock, item}) => {
         }
     }
 
-    const addItem = () => addCartItem({ ... item, quantity: count }) // paso product y al final le agrego quantity como otra propiedad
+    const addItem = () => {
+        addCartItem({ ... item, quantity: count }) // paso product y al final le agrego quantity como otra propiedad
+        navigate('/cart')
+    }
 
     return(
         <div className="countContainer">

@@ -6,14 +6,14 @@ import "./CartWidget.css"
 
 const CartWidget = () => {
   
-  const { cartItems } = useContext(CartContext)
+  const { cartItems, totalCartQuantity } = useContext(CartContext)
   //const navigate = useNavigate()
   
   return ( 
     <div>
         <Link to='/cart' className="cartIconContainer">
           <CartIcon className="cartIcon" size={28}/>
-          {cartItems.length > 0 && cartItems.length}
+          {cartItems.length > 0 && totalCartQuantity}
         </Link>
     </div>
   )
