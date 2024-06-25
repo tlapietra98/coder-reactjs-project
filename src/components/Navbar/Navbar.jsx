@@ -6,13 +6,13 @@ const Navbar = () => {
   return (
     <nav className="navContainer">
         <div>
-          <Link to='/' className="logo"><h1>Gamestuck</h1></Link>
+          <Link className="logo" to='/'>Gamestuck</Link>
         </div>
         <div className="navLinks"> 
-          <Link to='/'>Home</Link>
-          <Link to='/category/consoles'>Consoles</Link>
-          <Link to='/category/videogames'>Videogames</Link>
-          <Link to='/orders'>Orders</Link>  
+          <Link className="link" to='/'>Home</Link>
+          <Link className="link" to='/category/consoles'>Consoles</Link>
+          <Link className="link" to='/category/videogames'>Videogames</Link>
+          <Link className="link" to='/orders'>Orders</Link>  
         </div>
         <CartWidget/>
     </nav>

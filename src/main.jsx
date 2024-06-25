@@ -2,6 +2,9 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App.jsx"
 import { initializeApp } from "firebase/app"
+import "./main.css"
+import "./fontawesome.js"
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBgim0c-a3Kqla247JQvNZhnQ63cCOES7w",

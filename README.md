@@ -1,8 +1,15 @@
-# React + Vite
+# E-Commerce App - Coderhouse ReactJS Proyect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esto es un parrafo
 
-Currently, two official plugins are available:
+## Esto seria un H2
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Esto seria un H3
+
+- Lista
+- Lista
+- Lista
+
+```javascript
+aca puedo pegar codigo y lo muestra como codigo y lo puedo copiar y pegar etc
+```
