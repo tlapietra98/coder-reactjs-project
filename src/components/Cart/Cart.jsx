@@ -48,7 +48,7 @@ function Cart (){
     }
 
     return(
-        <div>Your cart is empty!</div>
+        <div className="emptyCartMsg">Your cart is empty!</div>
     )
 }
 
