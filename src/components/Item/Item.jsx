@@ -8,9 +8,10 @@ const Item = ({product}) => {
   const navigate = useNavigate()
   
   return (
-    <div className="itemContainer">
+    <div className="itemCard">
         <h3>{product.name}</h3>
         <img style={{"maxWidth": "200px","maxHeight": "200px"}} src={product.image} alt={product.description}/>
+        <span>{product.description}</span>
         <p>${product.price}</p>
         <button onClick={()=>navigate(`/item/${product.id}`)}>
           See more

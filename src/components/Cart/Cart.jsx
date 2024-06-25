@@ -36,9 +36,13 @@ function Cart (){
     if (cartItems.length){
         return (
             <div className="cartContainer">
-                {cartItems.map(item => <CartItem key={item.id} cItem={item} />)}
-                <p>Total: {totalCartPrice}</p>
-                <button onClick={addPurchaseOrder}>Confirm purchase</button>
+                <div className="cartItemsContainer">
+                    {cartItems.map(item => <CartItem key={item.id} cItem={item} />)}
+                </div>
+                <div className="confirmContainer">
+                    <p>Total: {totalCartPrice}</p>
+                    <button onClick={addPurchaseOrder}>Confirm purchase</button>
+                </div>
             </div>
         )
     }
