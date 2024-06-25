@@ -29,7 +29,7 @@ const OrderContainer = () => {
   return (
     <div className="orderContainerContainer">
       {orders.map(order => 
-        <div key={order.id}>
+        <div key={order.id} className="order">
           <h3>Purchase order ID: {order.id}</h3>
           <p>Purchase order Total: {order.total}</p>
           <p>Buyer: {order.buyer.name}</p>

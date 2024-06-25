@@ -40,8 +40,8 @@ function Cart (){
                     {cartItems.map(item => <CartItem key={item.id} cItem={item} />)}
                 </div>
                 <div className="confirmContainer">
-                    <p>Total: {totalCartPrice}</p>
-                    <button onClick={addPurchaseOrder}>Confirm purchase</button>
+                    <p>Total: ${totalCartPrice}</p>
+                    <button onClick={addPurchaseOrder}>Go to Checkout</button>
                 </div>
             </div>
         )

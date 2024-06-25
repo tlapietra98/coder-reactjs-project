@@ -3,5 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    margin: 10px;
+    width: 80%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin: 10px auto;
+    gap: 10px;
+}
+
+.order{
+    color: white;
+    padding: 10px;
 }
