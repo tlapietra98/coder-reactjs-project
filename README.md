@@ -2,7 +2,7 @@
 
 Una aplicación web de comercio electrónico desarrollada con React como parte de la cursada del curso ReactJS de Coderhouse.
 
-<img src="./screenshot/video-app-react-coder.gif" width="300" >
+![](https://github.com/tlapietra98/coder-reactjs-project/blob/main/screenshots/video-app-react-coder.gif)
 
 ## Pantallas
 
