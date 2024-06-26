@@ -65,3 +65,8 @@ function AppRouter() {
 - **React Router DOM:** Para la gestión de la navegación
 - **React:** Para la construcción de interfaces
 - **Firebase:** Para el manejo de base de datos
+
+
+## Contacto
+
+Para preguntas o soporte, contacta a lapietra_98@hotmail.com.
