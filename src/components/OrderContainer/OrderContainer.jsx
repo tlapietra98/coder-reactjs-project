@@ -26,20 +26,27 @@ const OrderContainer = () => {
     
     }, [])
   
-  return (
-    <div className="orderContainerContainer">
-      {orders.map(order => 
-        <div key={order.id} className="order">
-          <h3>Purchase order ID: {order.id}</h3>
-          <p>Purchase order Total: {order.total}</p>
-          <p>Buyer: {order.buyer.name}</p>
-          <p>Phone: {order.buyer.phone}</p>
-          <p>Email: {order.buyer.email}</p>
+  
 
+  if (orders.length){
+    return (
+      <div className="orderContainerContainer">
+        {orders.map(order => 
+          <div key={order.id} className="order">
+            <h3>Purchase order ID: {order.id}</h3>
+            <p>Purchase order Total: ${order.total}</p>
+            <p>Buyer: {order.buyer.name}</p>
+            <p>Phone: {order.buyer.phone}</p>
+            <p>Email: {order.buyer.email}</p>
+          </div>)}
+      </div>
+    )
+  }
 
-        </div>)}
-    </div>
+  return(
+    <div className="emptyOrdersMsg">You have no orders!</div>
   )
+  
 }
 
 export default OrderContainer

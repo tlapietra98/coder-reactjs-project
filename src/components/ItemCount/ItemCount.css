@@ -21,3 +21,10 @@
     color: white;
     padding: 10px
 }
+
+.noStockMsg{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 20px;
+}

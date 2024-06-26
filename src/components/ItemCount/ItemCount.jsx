@@ -26,6 +26,16 @@ const ItemCount = ({initial, stock, item}) => {
         navigate('/cart')
     }
 
+
+    
+    if(stock==0){
+        return(
+            <div className="noStockMsg">
+                No stock available!
+            </div>
+        )
+    }
+
     return(
         <div className="countContainer">
             <div>

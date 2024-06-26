@@ -16,7 +16,6 @@ const ItemDetail = ({ product }) => {
 
         <div className="itemCountContainer"><ItemCount initial={1} stock={product.stock} item={product} /></div>
         
-
         {console.log(product)}
 
     </div>
