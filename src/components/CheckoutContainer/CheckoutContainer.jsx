@@ -1,7 +1,8 @@
-import React from 'react'
-import Checkout from '../Checkout/Checkout'
+import React, {useContext} from 'react'
 import { collection , addDoc, getFirestore} from "firebase/firestore"
 import { useNavigate } from "react-router-dom"
+import { CartContext } from "../../context/CartContext"
+import Checkout from '../Checkout/Checkout'
 import "./CheckoutContainer.css"
 
 
